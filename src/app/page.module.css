@@ -1,0 +1,21 @@
+.main{
+  background-image: url('../../public/background.jpg');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.btnJugar {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ffa216; 
+  color: white; 
+  border: 2px solid #cc7a00; 
+  border-radius: 5px;
+  cursor: pointer; 
+}
+
