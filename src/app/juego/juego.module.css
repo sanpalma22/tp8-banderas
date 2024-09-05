@@ -1,0 +1,97 @@
+.contenedor {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../../../public/background.jpg");
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #060053bd;
+    border: 3px solid rgb(54, 198, 255);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(54, 198, 255, 0.7), /* Efecto de neón */
+                0 0 20px rgba(54, 198, 255, 0.5); /* Efecto de neón */
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.flag_image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid black;
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+.form {
+    width: 100%;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px; /* Aumentar el espacio entre el input y el botón */
+}
+
+.input {
+    padding: 15px; /* Aumentar el padding */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Aumentar el border-radius */
+    font-size: 18px; /* Aumentar el tamaño de fuente */
+    width: 100%;
+    max-width: 400px; /* Aumentar el ancho máximo del input */
+}
+
+.button {
+    padding: 15px 25px; /* Aumentar el padding */
+    border: none;
+    border-radius: 6px; /* Aumentar el border-radius */
+    background-color: #2831a7;
+    color: white;
+    font-size: 18px; /* Aumentar el tamaño de fuente */
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px; /* Aumentar el ancho máximo del botón */
+}
+
+.button:hover {
+    background-color: #181d5e;
+}
+
+.message {
+    font-size: 20px; /* Aumentar el tamaño de fuente */
+    margin-top: 20px;
+    color: #333;
+}
+
+
+.puntajeContainer {
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    padding: 15px; 
+    color: #fff;
+    background: #060053;
+    border: 3px solid rgb(54, 198, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(54, 198, 255, 0.7), /* Efecto de neón */
+                0 0 20px rgba(54, 198, 255, 0.5); /* Efecto de neón */
+    border-radius: 6px;
+}
+
+.puntaje {
+    font-size: 36px; /* Tamaño del texto del puntaje */
+    font-weight: bold; 
+}
+
+
