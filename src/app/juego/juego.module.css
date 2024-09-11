@@ -1,11 +1,11 @@
 .contenedor {
-    background-color: #f4f4f4;
+    background-image: url("../../../public/background.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url("../../../public/background.jpg");
     background-position: center;
+    background-size: cover;
 }
 
 .container {
@@ -24,8 +24,9 @@
 }
 
 .flag_image {
+    
     max-width: 100%;
-    height: auto;
+    max-height: 200px;
     border-radius: 8px;
     border: 3px solid black;
     margin-bottom: 20px; /* Espacio debajo de la imagen */
@@ -44,6 +45,7 @@
 }
 
 .input {
+    color: black;
     padding: 15px; /* Aumentar el padding */
     border: 1px solid #ccc;
     border-radius: 6px; /* Aumentar el border-radius */
@@ -69,9 +71,14 @@
 }
 
 .message {
-    font-size: 20px; /* Aumentar el tamaño de fuente */
-    margin-top: 20px;
-    color: #333;
+    position: absolute;
+    top: 20px;
+    font-size: larger; /* Aumentar el tamaño de fuente */
+    font-weight: bold;
+    color: #b9ebff; /* Color del texto */
+    text-shadow: 0 4px 8px rgba(0, 255, 255, 0.2),
+                0 0 10px rgba(54, 198, 255, 0.7), /* Efecto de neón */
+                0 0 20px rgba(54, 198, 255, 0.5);
 }
 
 
@@ -94,4 +101,22 @@
     font-weight: bold; 
 }
 
+.nivelContainer {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    padding: 15px; 
+    color: #fff;
+    background: #060053;
+    border: 3px solid rgb(54, 198, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(54, 198, 255, 0.7), /* Efecto de neón */
+                0 0 20px rgba(54, 198, 255, 0.5); /* Efecto de neón */
+    border-radius: 6px;
+}
+
+.nivel {
+    font-size: 36px; /* Tamaño del texto del puntaje */
+    font-weight: bold; 
+}
 
