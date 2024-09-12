@@ -50,7 +50,7 @@ export default function Juego() {
 
   const handleSubmitUser = (e) => {
     e.preventDefault();
-    localStorage.setItem(user, {puntaje,user});
+    localStorage.setItem(`puntaje_${user}`, {puntaje,user});
     router.push("/"); 
   };
 

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./tabla.module.css";
+
 export default function Tabla() {
   const [puntajes, setPuntajes] = useState([]);
 
@@ -10,22 +11,42 @@ export default function Tabla() {
 
       for (let i = 0; i < localStorage.length; i++) {
         const clave = localStorage.key(i);
-        console.log(clave);
-        const puntaje = localStorage.getItem(clave);
-        console.log(puntaje);
-        puntajesObtenidos.push({ nombre: clave, puntaje: parseInt(puntaje) });
-
-        setPuntajes(puntajesObtenidos);
-        console.log(puntajes);
+        if (clave.startsWith("puntaje_")) {
+          const puntaje = localStorage.getItem(clave);
+          const nombre = clave.replace("puntaje_", "");
+          puntajesObtenidos.push({ nombre, puntaje: parseInt(puntaje) });
+        }
       }
+
+      setPuntajes(puntajesObtenidos);
     }
+
     obtenerPuntajes();
   }, []);
 
   return (
     <>
-      <h1>Bienvenido</h1>
-      {puntajes.forEach((p) => {<p>{p.nombre}</p>})}
+    <div className={styles.contenedor}>
+      <h1>Tabla de puntaje</h1>    
+      <table className={styles.table}>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Jugador</th>
+            <th>Puntaje</th>
+          </tr>
+        </thead>
+        <tbody>
+          {puntajes.map((p, index) => (
+            <tr key={index}>
+              <td>{index + 1}</td>
+              <td>{p.nombre}</td>
+              <td>{p.puntaje}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      </div>
     </>
   );
 }
